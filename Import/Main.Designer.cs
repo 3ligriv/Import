@@ -34,6 +34,7 @@ namespace Import
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Main));
             this.tip_filenamePattern = new System.Windows.Forms.ToolTip(this.components);
             this.tbx_filenamePattern = new System.Windows.Forms.TextBox();
+            this.tbx_subdirectoryPattern = new System.Windows.Forms.TextBox();
             this.tbx_tag = new System.Windows.Forms.TextBox();
             this.btn_selectPics = new System.Windows.Forms.Button();
             this.fbd_pathFrom = new System.Windows.Forms.FolderBrowserDialog();
@@ -43,7 +44,6 @@ namespace Import
             this.cbx_excludeJPEG = new System.Windows.Forms.CheckBox();
             this.lbl_filenamePattern = new System.Windows.Forms.Label();
             this.lbl_subdirectoryPattern = new System.Windows.Forms.Label();
-            this.tbx_subdirectoryPattern = new System.Windows.Forms.TextBox();
             this.cbx_createSubdirectory = new System.Windows.Forms.CheckBox();
             this.grp_options = new System.Windows.Forms.GroupBox();
             this.lbl_tag = new System.Windows.Forms.Label();
@@ -93,6 +93,23 @@ namespace Import
             this.tbx_filenamePattern.HideSelection = false;
             this.tbx_filenamePattern.Name = "tbx_filenamePattern";
             this.tip_filenamePattern.SetToolTip(this.tbx_filenamePattern, resources.GetString("tbx_filenamePattern.ToolTip"));
+            // 
+            // tbx_subdirectoryPattern
+            // 
+            resources.ApplyResources(this.tbx_subdirectoryPattern, "tbx_subdirectoryPattern");
+            this.tbx_subdirectoryPattern.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
+            this.tbx_subdirectoryPattern.AllowDrop = true;
+            this.tbx_subdirectoryPattern.AutoCompleteCustomSource.AddRange(new string[] {
+            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource"),
+            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource1"),
+            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource2"),
+            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource3")});
+            this.tbx_subdirectoryPattern.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tbx_subdirectoryPattern.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tbx_subdirectoryPattern.HideSelection = false;
+            this.tbx_subdirectoryPattern.Name = "tbx_subdirectoryPattern";
+            this.tip_subdirectoryPattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip"));
+            this.tip_filenamePattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip1"));
             // 
             // tbx_tag
             // 
@@ -166,23 +183,6 @@ namespace Import
             resources.ApplyResources(this.lbl_subdirectoryPattern, "lbl_subdirectoryPattern");
             this.lbl_subdirectoryPattern.CausesValidation = false;
             this.lbl_subdirectoryPattern.Name = "lbl_subdirectoryPattern";
-            // 
-            // tbx_subdirectoryPattern
-            // 
-            resources.ApplyResources(this.tbx_subdirectoryPattern, "tbx_subdirectoryPattern");
-            this.tbx_subdirectoryPattern.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
-            this.tbx_subdirectoryPattern.AllowDrop = true;
-            this.tbx_subdirectoryPattern.AutoCompleteCustomSource.AddRange(new string[] {
-            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource"),
-            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource1"),
-            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource2"),
-            resources.GetString("tbx_subdirectoryPattern.AutoCompleteCustomSource3")});
-            this.tbx_subdirectoryPattern.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.tbx_subdirectoryPattern.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tbx_subdirectoryPattern.HideSelection = false;
-            this.tbx_subdirectoryPattern.Name = "tbx_subdirectoryPattern";
-            this.tip_subdirectoryPattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip"));
-            this.tip_filenamePattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip1"));
             // 
             // cbx_createSubdirectory
             // 

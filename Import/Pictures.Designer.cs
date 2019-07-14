@@ -36,18 +36,24 @@
             this.btn_cancel = new System.Windows.Forms.Button();
             this.lbl_nbPics = new System.Windows.Forms.Label();
             this.pnl_buttons = new System.Windows.Forms.Panel();
-            this.bwk_populateListView = new System.ComponentModel.BackgroundWorker();
+            this.imr_item = new BrightIdeasSoftware.ImageRenderer();
+            this.olv_pics = new BrightIdeasSoftware.ObjectListView();
+            this.olvcol_name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcol_Image = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.olvcol_directory = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.bwk_picsLoader = new System.ComponentModel.BackgroundWorker();
             this.pnl_buttons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.olv_pics)).BeginInit();
             this.SuspendLayout();
             // 
             // lvw_Pics
             // 
             this.lvw_Pics.Activation = System.Windows.Forms.ItemActivation.OneClick;
             resources.ApplyResources(this.lvw_Pics, "lvw_Pics");
+            this.lvw_Pics.GridLines = true;
             this.lvw_Pics.HideSelection = false;
             this.lvw_Pics.LargeImageList = this.imglst_Pics;
             this.lvw_Pics.Name = "lvw_Pics";
-            this.lvw_Pics.SmallImageList = this.imglst_Pics;
             this.lvw_Pics.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvw_Pics.UseCompatibleStateImageBehavior = false;
             this.lvw_Pics.VirtualMode = true;
@@ -85,13 +91,73 @@
             this.pnl_buttons.Controls.Add(this.btn_cancel);
             this.pnl_buttons.Name = "pnl_buttons";
             // 
-            // bwk_populateListView
+            // imr_item
             // 
-            this.bwk_populateListView.WorkerReportsProgress = true;
-            this.bwk_populateListView.WorkerSupportsCancellation = true;
-            this.bwk_populateListView.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Bwk_populateListView_DoWork);
-            this.bwk_populateListView.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Bwk_populateListView_ProgressChanged);
-            this.bwk_populateListView.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Bwk_populateListView_RunWorkerCompleted);
+            this.imr_item.ImageList = this.imglst_Pics;
+            // 
+            // olv_pics
+            // 
+            this.olv_pics.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.olv_pics.AllColumns.Add(this.olvcol_name);
+            this.olv_pics.AllColumns.Add(this.olvcol_directory);
+            this.olv_pics.AllColumns.Add(this.olvcol_Image);
+            resources.ApplyResources(this.olv_pics, "olv_pics");
+            this.olv_pics.CellEditUseWholeCell = false;
+            this.olv_pics.CheckBoxes = true;
+            this.olv_pics.CheckedAspectName = "IsSelected";
+            this.olv_pics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvcol_name,
+            this.olvcol_directory,
+            this.olvcol_Image});
+            this.olv_pics.CopySelectionOnControlC = false;
+            this.olv_pics.Cursor = System.Windows.Forms.Cursors.Default;
+            this.olv_pics.HideSelection = false;
+            this.olv_pics.ItemRenderer = this.imr_item;
+            this.olv_pics.LargeImageList = this.imglst_Pics;
+            this.olv_pics.Name = "olv_pics";
+            this.olv_pics.ShowFilterMenuOnRightClick = false;
+            this.olv_pics.ShowHeaderInAllViews = false;
+            this.olv_pics.ShowItemCountOnGroups = true;
+            this.olv_pics.UseCompatibleStateImageBehavior = false;
+            this.olv_pics.View = System.Windows.Forms.View.LargeIcon;
+            // 
+            // olvcol_name
+            // 
+            this.olvcol_name.AspectName = "FileInfo.Name";
+            this.olvcol_name.AutoCompleteEditor = false;
+            this.olvcol_name.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.olvcol_name.Groupable = false;
+            this.olvcol_name.IsEditable = false;
+            resources.ApplyResources(this.olvcol_name, "olvcol_name");
+            // 
+            // olvcol_Image
+            // 
+            this.olvcol_Image.AspectName = "FileInfo.FullName";
+            this.olvcol_Image.AutoCompleteEditor = false;
+            this.olvcol_Image.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.olvcol_Image.Groupable = false;
+            this.olvcol_Image.ImageAspectName = "FileInfo.FullName";
+            this.olvcol_Image.IsEditable = false;
+            this.olvcol_Image.Renderer = this.imr_item;
+            resources.ApplyResources(this.olvcol_Image, "olvcol_Image");
+            // 
+            // olvcol_directory
+            // 
+            this.olvcol_directory.AspectName = "FileInfo.DirectoryName";
+            this.olvcol_directory.AutoCompleteEditor = false;
+            this.olvcol_directory.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.olvcol_directory.IsEditable = false;
+            this.olvcol_directory.Searchable = false;
+            this.olvcol_directory.Sortable = false;
+            resources.ApplyResources(this.olvcol_directory, "olvcol_directory");
+            // 
+            // bwk_picsLoader
+            // 
+            this.bwk_picsLoader.WorkerReportsProgress = true;
+            this.bwk_picsLoader.WorkerSupportsCancellation = true;
+            this.bwk_picsLoader.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Bwk_picsLoader_DoWork);
+            this.bwk_picsLoader.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Bwk_picsLoader_ProgressChanged);
+            this.bwk_picsLoader.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Bwk_picsLoader_RunWorkerCompleted);
             // 
             // frm_Pictures
             // 
@@ -99,6 +165,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_cancel;
+            this.Controls.Add(this.olv_pics);
             this.Controls.Add(this.lbl_nbPics);
             this.Controls.Add(this.lvw_Pics);
             this.Controls.Add(this.pnl_buttons);
@@ -107,9 +174,9 @@
             this.Name = "frm_Pictures";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Pictures_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Pictures_Load);
             this.pnl_buttons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.olv_pics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,6 +190,11 @@
         private System.Windows.Forms.ImageList imglst_Pics;
         private System.Windows.Forms.Label lbl_nbPics;
         private System.Windows.Forms.Panel pnl_buttons;
-        private System.ComponentModel.BackgroundWorker bwk_populateListView;
+        private BrightIdeasSoftware.ImageRenderer imr_item;
+        private BrightIdeasSoftware.ObjectListView olv_pics;
+        private BrightIdeasSoftware.OLVColumn olvcol_name;
+        private BrightIdeasSoftware.OLVColumn olvcol_Image;
+        private BrightIdeasSoftware.OLVColumn olvcol_directory;
+        private System.ComponentModel.BackgroundWorker bwk_picsLoader;
     }
 }

@@ -177,6 +177,66 @@ $(TAG): Your custom word.
   <data name="&gt;&gt;tbx_filenamePattern.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <metadata name="tbx_subdirectoryPattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 70</value>
+  </metadata>
+  <data name="tbx_subdirectoryPattern.AccessibleDescription" xml:space="preserve">
+    <value>The pattern to use to create subdirectory</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AccessibleName" xml:space="preserve">
+    <value>subdirectory pattern textbox</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>$(#)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>$(TAG)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>$(TIME)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 55</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 20</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Text" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.ToolTip" xml:space="preserve">
+    <value>$(DATE): Shooting date.
+$(#): Sequence number.
+$(TAG): Custom tag.
+$(TIME): Shooting time.</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.ToolTip1" xml:space="preserve">
+    <value>$(DATE): Shooting date.
+$(#): Sequence number.
+$(TAG): Custom tag.
+$(TIME): Shooting time.</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Name" xml:space="preserve">
+    <value>tbx_subdirectoryPattern</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <metadata name="tbx_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -478,66 +538,6 @@ $(TAG): Your custom word.
   <data name="&gt;&gt;lbl_subdirectoryPattern.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="tbx_subdirectoryPattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>591, 70</value>
-  </metadata>
-  <data name="tbx_subdirectoryPattern.AccessibleDescription" xml:space="preserve">
-    <value>The pattern to use to create subdirectory</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.AccessibleName" xml:space="preserve">
-    <value>subdirectory pattern textbox</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource" xml:space="preserve">
-    <value>$(DATE)</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource1" xml:space="preserve">
-    <value>$(#)</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource2" xml:space="preserve">
-    <value>$(TAG)</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource3" xml:space="preserve">
-    <value>$(TIME)</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 55</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 20</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.Text" xml:space="preserve">
-    <value>$(DATE)</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.ToolTip" xml:space="preserve">
-    <value>$(DATE): Shooting date.
-$(#): Sequence number.
-$(TAG): Custom tag.
-$(TIME): Shooting time.</value>
-  </data>
-  <data name="tbx_subdirectoryPattern.ToolTip1" xml:space="preserve">
-    <value>$(DATE): Shooting date.
-$(#): Sequence number.
-$(TAG): Custom tag.
-$(TIME): Shooting time.</value>
-  </data>
-  <data name="&gt;&gt;tbx_subdirectoryPattern.Name" xml:space="preserve">
-    <value>tbx_subdirectoryPattern</value>
-  </data>
-  <data name="&gt;&gt;tbx_subdirectoryPattern.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbx_subdirectoryPattern.Parent" xml:space="preserve">
-    <value>grp_options</value>
-  </data>
-  <data name="&gt;&gt;tbx_subdirectoryPattern.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="cbx_createSubdirectory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -583,24 +583,6 @@ $(TIME): Shooting time.</value>
   <metadata name="lbl_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lbl_tag.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_tag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 117</value>
-  </data>
-  <data name="lbl_tag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
-  </data>
-  <data name="lbl_tag.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbl_tag.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
   <data name="&gt;&gt;lbl_tag.Name" xml:space="preserve">
     <value>lbl_tag</value>
   </data>
@@ -639,6 +621,39 @@ $(TIME): Shooting time.</value>
   </data>
   <data name="&gt;&gt;grp_options.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <metadata name="lbl_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 117</value>
+  </data>
+  <data name="lbl_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="lbl_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_tag.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Name" xml:space="preserve">
+    <value>lbl_tag</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="btn_import.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -874,75 +889,6 @@ $(TIME): Shooting time.</value>
   <metadata name="tbx_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="cbx_recursive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btn_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;tbx_pathFrom.Name" xml:space="preserve">
-    <value>tbx_pathFrom</value>
-  </data>
-  <data name="&gt;&gt;tbx_pathFrom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbx_pathFrom.Parent" xml:space="preserve">
-    <value>grp_from</value>
-  </data>
-  <data name="&gt;&gt;tbx_pathFrom.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbx_recursive.Name" xml:space="preserve">
-    <value>cbx_recursive</value>
-  </data>
-  <data name="&gt;&gt;cbx_recursive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbx_recursive.Parent" xml:space="preserve">
-    <value>grp_from</value>
-  </data>
-  <data name="&gt;&gt;cbx_recursive.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btn_pathFrom.Name" xml:space="preserve">
-    <value>btn_pathFrom</value>
-  </data>
-  <data name="&gt;&gt;btn_pathFrom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_pathFrom.Parent" xml:space="preserve">
-    <value>grp_from</value>
-  </data>
-  <data name="&gt;&gt;btn_pathFrom.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="grp_from.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="grp_from.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 82</value>
-  </data>
-  <data name="grp_from.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="grp_from.Text" xml:space="preserve">
-    <value>Import from...</value>
-  </data>
-  <data name="&gt;&gt;grp_from.Name" xml:space="preserve">
-    <value>grp_from</value>
-  </data>
-  <data name="&gt;&gt;grp_from.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grp_from.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grp_from.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="tbx_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="tbx_pathFrom.AccessibleDescription" xml:space="preserve">
     <value>Path from which to import pictures</value>
   </data>
@@ -1044,6 +990,30 @@ $(TIME): Shooting time.</value>
   </data>
   <data name="&gt;&gt;btn_pathFrom.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="grp_from.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="grp_from.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 82</value>
+  </data>
+  <data name="grp_from.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="grp_from.Text" xml:space="preserve">
+    <value>Import from...</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Name" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_from.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="fbd_pathTo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>478, 70</value>
