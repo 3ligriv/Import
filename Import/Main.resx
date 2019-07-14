@@ -1,0 +1,1126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="tip_filenamePattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>193, 70</value>
+  </metadata>
+  <metadata name="tbx_filenamePattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tbx_filenamePattern.AccessibleDescription" xml:space="preserve">
+    <value>The pattern to use to name pictures</value>
+  </data>
+  <data name="tbx_filenamePattern.AccessibleName" xml:space="preserve">
+    <value>Pictures filename pattern textbox</value>
+  </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>$(EXT)</value>
+  </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>$(#)</value>
+  </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>$(TAG)</value>
+  </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource4" xml:space="preserve">
+    <value>$(TIME)</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tbx_filenamePattern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 94</value>
+  </data>
+  <data name="tbx_filenamePattern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 20</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tbx_filenamePattern.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbx_filenamePattern.Text" xml:space="preserve">
+    <value>$(DATE)_$(TIME)_$(#).$(EXT)</value>
+  </data>
+  <data name="tbx_filenamePattern.ToolTip" xml:space="preserve">
+    <value>$(DATE): Shooting date.
+$(EXT): File extension.
+$(#): Sequence number.
+$(TAG): Your custom word.
+</value>
+  </data>
+  <data name="&gt;&gt;tbx_filenamePattern.Name" xml:space="preserve">
+    <value>tbx_filenamePattern</value>
+  </data>
+  <data name="&gt;&gt;tbx_filenamePattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_filenamePattern.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;tbx_filenamePattern.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="tbx_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tbx_tag.AccessibleDescription" xml:space="preserve">
+    <value>The pattern to use to name pictures</value>
+  </data>
+  <data name="tbx_tag.AccessibleName" xml:space="preserve">
+    <value>Pictures filename pattern textbox</value>
+  </data>
+  <data name="tbx_tag.AutoCompleteCustomSource" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_tag.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>$(EXT)</value>
+  </data>
+  <data name="tbx_tag.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>$(#)</value>
+  </data>
+  <data name="tbx_tag.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>$(TAG)</value>
+  </data>
+  <data name="tbx_tag.AutoCompleteCustomSource4" xml:space="preserve">
+    <value>$(TIME)</value>
+  </data>
+  <data name="tbx_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 133</value>
+  </data>
+  <data name="tbx_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 20</value>
+  </data>
+  <data name="tbx_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tbx_tag.Name" xml:space="preserve">
+    <value>tbx_tag</value>
+  </data>
+  <data name="&gt;&gt;tbx_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_tag.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;tbx_tag.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="btn_selectPics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btn_selectPics.AccessibleDescription" xml:space="preserve">
+    <value>Button to browse for the path from which import pictures</value>
+  </data>
+  <data name="btn_selectPics.AccessibleName" xml:space="preserve">
+    <value>Path from button</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btn_selectPics.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_selectPics.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="btn_selectPics.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 23</value>
+  </data>
+  <data name="btn_selectPics.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btn_selectPics.Text" xml:space="preserve">
+    <value>Select the pictures</value>
+  </data>
+  <data name="&gt;&gt;btn_selectPics.Name" xml:space="preserve">
+    <value>btn_selectPics</value>
+  </data>
+  <data name="&gt;&gt;btn_selectPics.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_selectPics.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;btn_selectPics.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="fbd_pathFrom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>350, 70</value>
+  </metadata>
+  <metadata name="lbl_nbPic.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_nbPic.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_nbPic.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_nbPic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="lbl_nbPic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 13</value>
+  </data>
+  <data name="lbl_nbPic.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lbl_nbPic.Text" xml:space="preserve">
+    <value>No pictures found</value>
+  </data>
+  <data name="&gt;&gt;lbl_nbPic.Name" xml:space="preserve">
+    <value>lbl_nbPic</value>
+  </data>
+  <data name="&gt;&gt;lbl_nbPic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_nbPic.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;lbl_nbPic.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="grp_photos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btn_editMetadata.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cbx_excludeJPEG.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;btn_editMetadata.Name" xml:space="preserve">
+    <value>btn_editMetadata</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Name" xml:space="preserve">
+    <value>cbx_excludeJPEG</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="grp_photos.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grp_photos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 100</value>
+  </data>
+  <data name="grp_photos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 115</value>
+  </data>
+  <data name="grp_photos.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="grp_photos.Text" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Name" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="btn_editMetadata.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btn_editMetadata.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 85</value>
+  </data>
+  <data name="btn_editMetadata.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 23</value>
+  </data>
+  <data name="btn_editMetadata.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btn_editMetadata.Text" xml:space="preserve">
+    <value>Edit default metadata</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.Name" xml:space="preserve">
+    <value>btn_editMetadata</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;btn_editMetadata.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="cbx_excludeJPEG.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cbx_excludeJPEG.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbx_excludeJPEG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 62</value>
+  </data>
+  <data name="cbx_excludeJPEG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 17</value>
+  </data>
+  <data name="cbx_excludeJPEG.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cbx_excludeJPEG.Text" xml:space="preserve">
+    <value>Exclude JPEG files when importing</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Name" xml:space="preserve">
+    <value>cbx_excludeJPEG</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.Parent" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;cbx_excludeJPEG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="lbl_filenamePattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_filenamePattern.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_filenamePattern.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_filenamePattern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 78</value>
+  </data>
+  <data name="lbl_filenamePattern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 13</value>
+  </data>
+  <data name="lbl_filenamePattern.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lbl_filenamePattern.Text" xml:space="preserve">
+    <value>Filename pattern</value>
+  </data>
+  <data name="&gt;&gt;lbl_filenamePattern.Name" xml:space="preserve">
+    <value>lbl_filenamePattern</value>
+  </data>
+  <data name="&gt;&gt;lbl_filenamePattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_filenamePattern.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;lbl_filenamePattern.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="lbl_subdirectoryPattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_subdirectoryPattern.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_subdirectoryPattern.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_subdirectoryPattern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="lbl_subdirectoryPattern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lbl_subdirectoryPattern.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_subdirectoryPattern.Text" xml:space="preserve">
+    <value>Subdirectory pattern</value>
+  </data>
+  <data name="&gt;&gt;lbl_subdirectoryPattern.Name" xml:space="preserve">
+    <value>lbl_subdirectoryPattern</value>
+  </data>
+  <data name="&gt;&gt;lbl_subdirectoryPattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_subdirectoryPattern.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;lbl_subdirectoryPattern.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="tbx_subdirectoryPattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 70</value>
+  </metadata>
+  <data name="tbx_subdirectoryPattern.AccessibleDescription" xml:space="preserve">
+    <value>The pattern to use to create subdirectory</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AccessibleName" xml:space="preserve">
+    <value>subdirectory pattern textbox</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource1" xml:space="preserve">
+    <value>$(#)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource2" xml:space="preserve">
+    <value>$(TAG)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.AutoCompleteCustomSource3" xml:space="preserve">
+    <value>$(TIME)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 55</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Size" type="System.Drawing.Size, System.Drawing">
+    <value>416, 20</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.Text" xml:space="preserve">
+    <value>$(DATE)</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.ToolTip" xml:space="preserve">
+    <value>$(DATE): Shooting date.
+$(#): Sequence number.
+$(TAG): Custom tag.
+$(TIME): Shooting time.</value>
+  </data>
+  <data name="tbx_subdirectoryPattern.ToolTip1" xml:space="preserve">
+    <value>$(DATE): Shooting date.
+$(#): Sequence number.
+$(TAG): Custom tag.
+$(TIME): Shooting time.</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Name" xml:space="preserve">
+    <value>tbx_subdirectoryPattern</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;tbx_subdirectoryPattern.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="cbx_createSubdirectory.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cbx_createSubdirectory.AccessibleDescription" xml:space="preserve">
+    <value>Whether to create subdirectories or not</value>
+  </data>
+  <data name="cbx_createSubdirectory.AccessibleName" xml:space="preserve">
+    <value>Subdirectory creation checkbox</value>
+  </data>
+  <data name="cbx_createSubdirectory.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbx_createSubdirectory.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbx_createSubdirectory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 19</value>
+  </data>
+  <data name="cbx_createSubdirectory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="cbx_createSubdirectory.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbx_createSubdirectory.Text" xml:space="preserve">
+    <value>Create subdirectories</value>
+  </data>
+  <data name="&gt;&gt;cbx_createSubdirectory.Name" xml:space="preserve">
+    <value>cbx_createSubdirectory</value>
+  </data>
+  <data name="&gt;&gt;cbx_createSubdirectory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_createSubdirectory.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;cbx_createSubdirectory.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="grp_options.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lbl_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 117</value>
+  </data>
+  <data name="lbl_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="lbl_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_tag.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Name" xml:space="preserve">
+    <value>lbl_tag</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.Parent" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;lbl_tag.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="grp_options.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grp_options.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 221</value>
+  </data>
+  <data name="grp_options.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 162</value>
+  </data>
+  <data name="grp_options.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="grp_options.Text" xml:space="preserve">
+    <value>Import options</value>
+  </data>
+  <data name="&gt;&gt;grp_options.Name" xml:space="preserve">
+    <value>grp_options</value>
+  </data>
+  <data name="&gt;&gt;grp_options.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_options.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_options.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="btn_import.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btn_import.AccessibleDescription" xml:space="preserve">
+    <value>Start the process</value>
+  </data>
+  <data name="btn_import.AccessibleName" xml:space="preserve">
+    <value>Import start button</value>
+  </data>
+  <data name="btn_import.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btn_import.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_import.Location" type="System.Drawing.Point, System.Drawing">
+    <value>346, 465</value>
+  </data>
+  <data name="btn_import.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 34</value>
+  </data>
+  <data name="btn_import.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btn_import.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="&gt;&gt;btn_import.Name" xml:space="preserve">
+    <value>btn_import</value>
+  </data>
+  <data name="&gt;&gt;btn_import.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_import.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btn_import.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="lbl_pathTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_pathTo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_pathTo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_pathTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="lbl_pathTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 13</value>
+  </data>
+  <data name="lbl_pathTo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_pathTo.Text" xml:space="preserve">
+    <value>Path to...</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathTo.Name" xml:space="preserve">
+    <value>lbl_pathTo</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathTo.Parent" xml:space="preserve">
+    <value>grp_to</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathTo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="tbx_pathTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tbx_pathTo.AccessibleDescription" xml:space="preserve">
+    <value>The folder where you want to import the pictures</value>
+  </data>
+  <data name="tbx_pathTo.AccessibleName" xml:space="preserve">
+    <value>path to textbox</value>
+  </data>
+  <data name="tbx_pathTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="tbx_pathTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 20</value>
+  </data>
+  <data name="tbx_pathTo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathTo.Name" xml:space="preserve">
+    <value>tbx_pathTo</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathTo.Parent" xml:space="preserve">
+    <value>grp_to</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathTo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="btn_pathTo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btn_pathTo.AccessibleDescription" xml:space="preserve">
+    <value>Button to browse for the path to which import pictures</value>
+  </data>
+  <data name="btn_pathTo.AccessibleName" xml:space="preserve">
+    <value>Path to button</value>
+  </data>
+  <data name="btn_pathTo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_pathTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 30</value>
+  </data>
+  <data name="btn_pathTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="btn_pathTo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_pathTo.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btn_pathTo.Name" xml:space="preserve">
+    <value>btn_pathTo</value>
+  </data>
+  <data name="&gt;&gt;btn_pathTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_pathTo.Parent" xml:space="preserve">
+    <value>grp_to</value>
+  </data>
+  <data name="&gt;&gt;btn_pathTo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="grp_to.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="grp_to.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grp_to.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 389</value>
+  </data>
+  <data name="grp_to.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 63</value>
+  </data>
+  <data name="grp_to.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="grp_to.Text" xml:space="preserve">
+    <value>Import to...</value>
+  </data>
+  <data name="&gt;&gt;grp_to.Name" xml:space="preserve">
+    <value>grp_to</value>
+  </data>
+  <data name="&gt;&gt;grp_to.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_to.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_to.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="pbr_progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="pbr_progress.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbr_progress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 471</value>
+  </data>
+  <data name="pbr_progress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 23</value>
+  </data>
+  <data name="pbr_progress.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;pbr_progress.Name" xml:space="preserve">
+    <value>pbr_progress</value>
+  </data>
+  <data name="&gt;&gt;pbr_progress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbr_progress.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbr_progress.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="lbl_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lbl_pathFrom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_pathFrom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_pathFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 16</value>
+  </data>
+  <data name="lbl_pathFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="lbl_pathFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lbl_pathFrom.Text" xml:space="preserve">
+    <value>Path from...</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathFrom.Name" xml:space="preserve">
+    <value>lbl_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathFrom.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;lbl_pathFrom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="grp_from.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tbx_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cbx_recursive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btn_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;tbx_pathFrom.Name" xml:space="preserve">
+    <value>tbx_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Name" xml:space="preserve">
+    <value>cbx_recursive</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Name" xml:space="preserve">
+    <value>btn_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="grp_from.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="grp_from.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 82</value>
+  </data>
+  <data name="grp_from.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="grp_from.Text" xml:space="preserve">
+    <value>Import from...</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Name" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_from.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_from.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="tbx_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tbx_pathFrom.AccessibleDescription" xml:space="preserve">
+    <value>Path from which to import pictures</value>
+  </data>
+  <data name="tbx_pathFrom.AccessibleName" xml:space="preserve">
+    <value>Path from textbox</value>
+  </data>
+  <data name="tbx_pathFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 32</value>
+  </data>
+  <data name="tbx_pathFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 20</value>
+  </data>
+  <data name="tbx_pathFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.Name" xml:space="preserve">
+    <value>tbx_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;tbx_pathFrom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="cbx_recursive.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cbx_recursive.AccessibleDescription" xml:space="preserve">
+    <value>If you want to import pictures recursively in the subdirectories</value>
+  </data>
+  <data name="cbx_recursive.AccessibleName" xml:space="preserve">
+    <value>Recursive import checkbox</value>
+  </data>
+  <data name="cbx_recursive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbx_recursive.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbx_recursive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="cbx_recursive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 17</value>
+  </data>
+  <data name="cbx_recursive.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="cbx_recursive.Text" xml:space="preserve">
+    <value>Import recursively</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Name" xml:space="preserve">
+    <value>cbx_recursive</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;cbx_recursive.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="btn_pathFrom.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="btn_pathFrom.AccessibleDescription" xml:space="preserve">
+    <value>Button to browse for the path from which import pictures</value>
+  </data>
+  <data name="btn_pathFrom.AccessibleName" xml:space="preserve">
+    <value>Path from button</value>
+  </data>
+  <data name="btn_pathFrom.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btn_pathFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>390, 30</value>
+  </data>
+  <data name="btn_pathFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="btn_pathFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btn_pathFrom.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Name" xml:space="preserve">
+    <value>btn_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.Parent" xml:space="preserve">
+    <value>grp_from</value>
+  </data>
+  <data name="&gt;&gt;btn_pathFrom.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="fbd_pathTo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>478, 70</value>
+  </metadata>
+  <data name="fbd_pathTo.SelectedPath" xml:space="preserve">
+    <value>C:\Users\virgi\Pictures</value>
+  </data>
+  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 70</value>
+  </metadata>
+  <metadata name="bwk_searchPics.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>769, 70</value>
+  </metadata>
+  <metadata name="bwk_copyPics.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>904, 70</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>178</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>452, 511</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="&gt;&gt;tip_filenamePattern.Name" xml:space="preserve">
+    <value>tip_filenamePattern</value>
+  </data>
+  <data name="&gt;&gt;tip_filenamePattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fbd_pathFrom.Name" xml:space="preserve">
+    <value>fbd_pathFrom</value>
+  </data>
+  <data name="&gt;&gt;fbd_pathFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fbd_pathTo.Name" xml:space="preserve">
+    <value>fbd_pathTo</value>
+  </data>
+  <data name="&gt;&gt;fbd_pathTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tip_subdirectoryPattern.Name" xml:space="preserve">
+    <value>tip_subdirectoryPattern</value>
+  </data>
+  <data name="&gt;&gt;tip_subdirectoryPattern.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bwk_searchPics.Name" xml:space="preserve">
+    <value>bwk_searchPics</value>
+  </data>
+  <data name="&gt;&gt;bwk_searchPics.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bwk_copyPics.Name" xml:space="preserve">
+    <value>bwk_copyPics</value>
+  </data>
+  <data name="&gt;&gt;bwk_copyPics.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frm_Main</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
