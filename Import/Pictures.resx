@@ -261,40 +261,43 @@
   <metadata name="imr_item.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>128, 17</value>
   </metadata>
-  <data name="olvcol_name.Text" xml:space="preserve">
+  <data name="col_name.Text" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="olvcol_directory.Text" xml:space="preserve">
-    <value>Folder</value>
-  </data>
-  <data name="olvcol_Image.Text" xml:space="preserve">
+  <data name="col_pic.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="olv_pics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="col_folder.Text" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="fol_pics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="olv_pics.GroupWithItemCountFormat" xml:space="preserve">
+  <data name="fol_pics.EmptyListMsg" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="fol_pics.GroupWithItemCountFormat" xml:space="preserve">
     <value>({0})</value>
   </data>
-  <data name="olv_pics.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="fol_pics.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 206</value>
   </data>
-  <data name="olv_pics.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="fol_pics.Size" type="System.Drawing.Size, System.Drawing">
     <value>775, 190</value>
   </data>
-  <data name="olv_pics.TabIndex" type="System.Int32, mscorlib">
+  <data name="fol_pics.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;olv_pics.Name" xml:space="preserve">
-    <value>olv_pics</value>
+  <data name="&gt;&gt;fol_pics.Name" xml:space="preserve">
+    <value>fol_pics</value>
   </data>
-  <data name="&gt;&gt;olv_pics.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
+  <data name="&gt;&gt;fol_pics.Type" xml:space="preserve">
+    <value>BrightIdeasSoftware.FastObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;olv_pics.Parent" xml:space="preserve">
+  <data name="&gt;&gt;fol_pics.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;olv_pics.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;fol_pics.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="bwk_picsLoader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -327,22 +330,22 @@
   <data name="&gt;&gt;imr_item.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.ImageRenderer, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;olvcol_name.Name" xml:space="preserve">
-    <value>olvcol_name</value>
+  <data name="&gt;&gt;col_folder.Name" xml:space="preserve">
+    <value>col_folder</value>
   </data>
-  <data name="&gt;&gt;olvcol_name.Type" xml:space="preserve">
+  <data name="&gt;&gt;col_folder.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;olvcol_Image.Name" xml:space="preserve">
-    <value>olvcol_Image</value>
+  <data name="&gt;&gt;col_name.Name" xml:space="preserve">
+    <value>col_name</value>
   </data>
-  <data name="&gt;&gt;olvcol_Image.Type" xml:space="preserve">
+  <data name="&gt;&gt;col_name.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
-  <data name="&gt;&gt;olvcol_directory.Name" xml:space="preserve">
-    <value>olvcol_directory</value>
+  <data name="&gt;&gt;col_pic.Name" xml:space="preserve">
+    <value>col_pic</value>
   </data>
-  <data name="&gt;&gt;olvcol_directory.Type" xml:space="preserve">
+  <data name="&gt;&gt;col_pic.Type" xml:space="preserve">
     <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
   </data>
   <data name="&gt;&gt;bwk_picsLoader.Name" xml:space="preserve">

@@ -37,13 +37,13 @@
             this.lbl_nbPics = new System.Windows.Forms.Label();
             this.pnl_buttons = new System.Windows.Forms.Panel();
             this.imr_item = new BrightIdeasSoftware.ImageRenderer();
-            this.olv_pics = new BrightIdeasSoftware.ObjectListView();
-            this.olvcol_name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcol_Image = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.olvcol_directory = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.fol_pics = new BrightIdeasSoftware.FastObjectListView();
+            this.col_folder = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.col_name = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.col_pic = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.bwk_picsLoader = new System.ComponentModel.BackgroundWorker();
             this.pnl_buttons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.olv_pics)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fol_pics)).BeginInit();
             this.SuspendLayout();
             // 
             // lvw_Pics
@@ -95,61 +95,61 @@
             // 
             this.imr_item.ImageList = this.imglst_Pics;
             // 
-            // olv_pics
+            // fol_pics
             // 
-            this.olv_pics.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.olv_pics.AllColumns.Add(this.olvcol_name);
-            this.olv_pics.AllColumns.Add(this.olvcol_directory);
-            this.olv_pics.AllColumns.Add(this.olvcol_Image);
-            resources.ApplyResources(this.olv_pics, "olv_pics");
-            this.olv_pics.CellEditUseWholeCell = false;
-            this.olv_pics.CheckBoxes = true;
-            this.olv_pics.CheckedAspectName = "IsSelected";
-            this.olv_pics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.olvcol_name,
-            this.olvcol_directory,
-            this.olvcol_Image});
-            this.olv_pics.CopySelectionOnControlC = false;
-            this.olv_pics.Cursor = System.Windows.Forms.Cursors.Default;
-            this.olv_pics.HideSelection = false;
-            this.olv_pics.ItemRenderer = this.imr_item;
-            this.olv_pics.LargeImageList = this.imglst_Pics;
-            this.olv_pics.Name = "olv_pics";
-            this.olv_pics.ShowFilterMenuOnRightClick = false;
-            this.olv_pics.ShowHeaderInAllViews = false;
-            this.olv_pics.ShowItemCountOnGroups = true;
-            this.olv_pics.UseCompatibleStateImageBehavior = false;
-            this.olv_pics.View = System.Windows.Forms.View.LargeIcon;
+            this.fol_pics.AllColumns.Add(this.col_name);
+            this.fol_pics.AllColumns.Add(this.col_pic);
+            this.fol_pics.AllColumns.Add(this.col_folder);
+            resources.ApplyResources(this.fol_pics, "fol_pics");
+            this.fol_pics.CellEditUseWholeCell = false;
+            this.fol_pics.CheckBoxes = true;
+            this.fol_pics.CheckedAspectName = "IsSelected";
+            this.fol_pics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.col_name,
+            this.col_pic});
+            this.fol_pics.HideSelection = false;
+            this.fol_pics.ItemRenderer = this.imr_item;
+            this.fol_pics.LargeImageList = this.imglst_Pics;
+            this.fol_pics.Name = "fol_pics";
+            this.fol_pics.ShowFilterMenuOnRightClick = false;
+            this.fol_pics.ShowHeaderInAllViews = false;
+            this.fol_pics.ShowSortIndicators = false;
+            this.fol_pics.SortGroupItemsByPrimaryColumn = false;
+            this.fol_pics.UseCompatibleStateImageBehavior = false;
+            this.fol_pics.View = System.Windows.Forms.View.LargeIcon;
+            this.fol_pics.VirtualMode = true;
             // 
-            // olvcol_name
+            // col_folder
             // 
-            this.olvcol_name.AspectName = "FileInfo.Name";
-            this.olvcol_name.AutoCompleteEditor = false;
-            this.olvcol_name.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.olvcol_name.Groupable = false;
-            this.olvcol_name.IsEditable = false;
-            resources.ApplyResources(this.olvcol_name, "olvcol_name");
+            this.col_folder.AspectName = "FileInfo.DirectoryName";
+            this.col_folder.IsEditable = false;
+            this.col_folder.IsVisible = false;
+            this.col_folder.Searchable = false;
+            this.col_folder.Sortable = false;
+            resources.ApplyResources(this.col_folder, "col_folder");
+            this.col_folder.UseFiltering = false;
             // 
-            // olvcol_Image
+            // col_name
             // 
-            this.olvcol_Image.AspectName = "FileInfo.FullName";
-            this.olvcol_Image.AutoCompleteEditor = false;
-            this.olvcol_Image.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.olvcol_Image.Groupable = false;
-            this.olvcol_Image.ImageAspectName = "FileInfo.FullName";
-            this.olvcol_Image.IsEditable = false;
-            this.olvcol_Image.Renderer = this.imr_item;
-            resources.ApplyResources(this.olvcol_Image, "olvcol_Image");
+            this.col_name.AspectName = "FileInfo.Name";
+            this.col_name.Groupable = false;
+            this.col_name.ImageAspectName = "FileInfo.FullName";
+            this.col_name.IsEditable = false;
+            this.col_name.Sortable = false;
+            resources.ApplyResources(this.col_name, "col_name");
+            this.col_name.UseFiltering = false;
             // 
-            // olvcol_directory
+            // col_pic
             // 
-            this.olvcol_directory.AspectName = "FileInfo.DirectoryName";
-            this.olvcol_directory.AutoCompleteEditor = false;
-            this.olvcol_directory.AutoCompleteEditorMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.olvcol_directory.IsEditable = false;
-            this.olvcol_directory.Searchable = false;
-            this.olvcol_directory.Sortable = false;
-            resources.ApplyResources(this.olvcol_directory, "olvcol_directory");
+            this.col_pic.AspectName = "FileInfo.FullName";
+            this.col_pic.Groupable = false;
+            this.col_pic.IsEditable = false;
+            this.col_pic.Renderer = this.imr_item;
+            this.col_pic.Searchable = false;
+            this.col_pic.ShowTextInHeader = false;
+            this.col_pic.Sortable = false;
+            resources.ApplyResources(this.col_pic, "col_pic");
+            this.col_pic.UseFiltering = false;
             // 
             // bwk_picsLoader
             // 
@@ -165,7 +165,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btn_cancel;
-            this.Controls.Add(this.olv_pics);
+            this.Controls.Add(this.fol_pics);
             this.Controls.Add(this.lbl_nbPics);
             this.Controls.Add(this.lvw_Pics);
             this.Controls.Add(this.pnl_buttons);
@@ -174,9 +174,10 @@
             this.Name = "frm_Pictures";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_Pictures_FormClosing);
             this.Load += new System.EventHandler(this.Frm_Pictures_Load);
             this.pnl_buttons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.olv_pics)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fol_pics)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,10 +192,10 @@
         private System.Windows.Forms.Label lbl_nbPics;
         private System.Windows.Forms.Panel pnl_buttons;
         private BrightIdeasSoftware.ImageRenderer imr_item;
-        private BrightIdeasSoftware.ObjectListView olv_pics;
-        private BrightIdeasSoftware.OLVColumn olvcol_name;
-        private BrightIdeasSoftware.OLVColumn olvcol_Image;
-        private BrightIdeasSoftware.OLVColumn olvcol_directory;
+        private BrightIdeasSoftware.FastObjectListView fol_pics;
+        private BrightIdeasSoftware.OLVColumn col_folder;
+        private BrightIdeasSoftware.OLVColumn col_name;
+        private BrightIdeasSoftware.OLVColumn col_pic;
         private System.ComponentModel.BackgroundWorker bwk_picsLoader;
     }
 }

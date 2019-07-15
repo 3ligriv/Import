@@ -22,7 +22,10 @@ namespace Import
             List<Picture> pics = ((frm_Main)Owner).Pictures;
             lvw_Pics.VirtualListSize = pics.Count();
             lbl_nbPics.Text = pics.Where(p => p.IsSelected).Count() + "/" + pics.Count + " pictures selected";
-            olv_pics.SetObjects(pics);
+            //olv_pics.SetObjects(pics);
+            //vol_pics.SetObjects(pics);
+            fol_pics.SetObjects(pics);
+            //bwk_picsLoader.RunWorkerAsync();
         }
 
         private RectangleF ScaleRect(RectangleF pSource, RectangleF pDest)
@@ -120,6 +123,12 @@ namespace Import
         private void Bwk_picsLoader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
 
+        }
+
+        private void Frm_Pictures_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (bwk_picsLoader.IsBusy)
+                bwk_picsLoader.CancelAsync();
         }
     }
 }
