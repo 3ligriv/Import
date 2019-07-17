@@ -12,6 +12,8 @@ namespace Import
 {
     public partial class frm_Pictures : Form
     {
+        List<Picture> pictures;
+
         public frm_Pictures()
         {
             InitializeComponent();
@@ -19,10 +21,12 @@ namespace Import
 
         private void Frm_Pictures_Load(object sender, EventArgs e)
         {
-            List<Picture> pics = ((frm_Main)Owner).Pictures;
-            lvw_Pics.VirtualListSize = pics.Count();
-            lbl_nbPics.Text = pics.Where(p => p.IsSelected).Count() + "/" + pics.Count + " pictures selected";
-            olv_pics.SetObjects(pics);
+            pictures = ((frm_Main)Owner).Pictures;
+            lvw_Pics.VirtualListSize = pictures.Count();
+            lbl_nbPics.Text = pictures.Where(p => p.IsSelected).Count() + "/" + pictures.Count + " pictures selected";
+            for (int i = 0; i < pictures.Count; i++)
+                if (pictures[i].IsSelected)
+                    lvw_Pics.SelectedIndices.Add(i);
         }
 
         private RectangleF ScaleRect(RectangleF pSource, RectangleF pDest)
@@ -53,8 +57,7 @@ namespace Import
 
         private void Lvw_Pics_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)
         {
-            List<Picture> pics = ((frm_Main)Owner).Pictures;
-            Picture pic = pics[e.ItemIndex];
+            Picture pic = pictures[e.ItemIndex];
 
             if (imglst_Pics.Images.Count == e.ItemIndex)
             {
@@ -73,53 +76,23 @@ namespace Import
                 imgSrc.Dispose();
                 imglst_Pics.Images.Add(pic.FileInfo.FullName, thumbnail);
             }
+            if (pic.IsSelected)
+            {
+                lvw_Pics.SelectedIndices.Add(e.ItemIndex);
+            }
             e.Item = new ListViewItem(pic.FileInfo.Name)
             {
-                Selected = pic.IsSelected,
+                //Selected = pic.IsSelected,
+                Checked = pic.IsSelected,
                 //Group = new ListViewGroup(pic.FileInfo.DirectoryName),
                 ImageIndex = e.ItemIndex
                 //ImageKey = pic.FileInfo.FullName
             };
         }
 
-        private void Bwk_picsLoader_DoWork(object sender, DoWorkEventArgs e)
+        private void Lvw_Pics_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            BackgroundWorker worker = (BackgroundWorker)sender;
-            List<Picture> pics = ((frm_Main)Owner).Pictures;
-
-            foreach (var pic in pics)
-            {
-                if (worker.CancellationPending)
-                {
-                    e.Cancel = true;
-                    return;
-                }
-                Image imgSrc = Image.FromFile(pic.FileInfo.FullName);
-                Image thumbnail = new Bitmap(imglst_Pics.ImageSize.Width, imglst_Pics.ImageSize.Height);
-                using (Graphics gr = Graphics.FromImage(thumbnail))
-                {
-                    gr.Clear(Color.Transparent);
-                    gr.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.Low;
-
-                    RectangleF srcRtl = new RectangleF(0, 0, imgSrc.Width, imgSrc.Height);
-                    RectangleF dstRtl = new RectangleF(0, 0, thumbnail.Width, thumbnail.Height);
-                    dstRtl = ScaleRect(srcRtl, dstRtl);
-                    gr.DrawImage(imgSrc, dstRtl, srcRtl, GraphicsUnit.Pixel);
-                }
-                imgSrc.Dispose();
-                worker.ReportProgress(0, new Tuple<string, Image>(pic.FileInfo.FullName, thumbnail));
-            }
-        }
-
-        private void Bwk_picsLoader_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            Tuple<string, Image> pic = (Tuple<string, Image>)e.UserState;
-            imglst_Pics.Images.Add(pic.Item1, pic.Item2);
-        }
-
-        private void Bwk_picsLoader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-
+            pictures[e.ItemIndex].IsSelected = !pictures[e.ItemIndex].IsSelected;
         }
     }
 }

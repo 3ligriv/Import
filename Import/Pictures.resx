@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="lvw_Pics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvw_Pics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -132,7 +135,7 @@
     <value>13, 13</value>
   </data>
   <data name="lvw_Pics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 186</value>
+    <value>775, 383</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvw_Pics.TabIndex" type="System.Int32, mscorlib">
@@ -148,8 +151,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lvw_Pics.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
+  <metadata name="btn_select.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_select.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -177,6 +183,9 @@
   <data name="&gt;&gt;btn_select.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="btn_cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btn_cancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -204,6 +213,9 @@
   <data name="&gt;&gt;btn_cancel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="lbl_nbPics.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="lbl_nbPics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -232,8 +244,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_nbPics.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
+  <metadata name="pnl_buttons.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="pnl_buttons.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -256,51 +271,12 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pnl_buttons.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
-  <metadata name="imr_item.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 17</value>
-  </metadata>
-  <data name="olvcol_name.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="olvcol_directory.Text" xml:space="preserve">
-    <value>Folder</value>
-  </data>
-  <data name="olvcol_Image.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="olv_pics.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="olv_pics.GroupWithItemCountFormat" xml:space="preserve">
-    <value>({0})</value>
-  </data>
-  <data name="olv_pics.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 206</value>
-  </data>
-  <data name="olv_pics.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 190</value>
-  </data>
-  <data name="olv_pics.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;olv_pics.Name" xml:space="preserve">
-    <value>olv_pics</value>
-  </data>
-  <data name="&gt;&gt;olv_pics.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ObjectListView, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;olv_pics.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;olv_pics.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="bwk_picsLoader.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>227, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -320,36 +296,6 @@
   </data>
   <data name="&gt;&gt;imglst_Pics.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imr_item.Name" xml:space="preserve">
-    <value>imr_item</value>
-  </data>
-  <data name="&gt;&gt;imr_item.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.ImageRenderer, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;olvcol_name.Name" xml:space="preserve">
-    <value>olvcol_name</value>
-  </data>
-  <data name="&gt;&gt;olvcol_name.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;olvcol_Image.Name" xml:space="preserve">
-    <value>olvcol_Image</value>
-  </data>
-  <data name="&gt;&gt;olvcol_Image.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;olvcol_directory.Name" xml:space="preserve">
-    <value>olvcol_directory</value>
-  </data>
-  <data name="&gt;&gt;olvcol_directory.Type" xml:space="preserve">
-    <value>BrightIdeasSoftware.OLVColumn, ObjectListView, Version=2.9.1.1072, Culture=neutral, PublicKeyToken=b1c5bf581481bcd4</value>
-  </data>
-  <data name="&gt;&gt;bwk_picsLoader.Name" xml:space="preserve">
-    <value>bwk_picsLoader</value>
-  </data>
-  <data name="&gt;&gt;bwk_picsLoader.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frm_Pictures</value>

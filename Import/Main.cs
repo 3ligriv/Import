@@ -63,6 +63,13 @@ namespace Import
         {
             if (Directory.Exists(tbx_pathFrom.Text))
                 StartSearch();
+            else
+            {
+                grp_photos.Enabled = false;
+                grp_options.Enabled = false;
+                grp_to.Enabled = false;
+                btn_import.Enabled = false;
+            }
         }
 
         /// <summary>
@@ -132,6 +139,7 @@ namespace Import
             grp_photos.Enabled = false;
             grp_options.Enabled = false;
             grp_to.Enabled = false;
+            btn_import.Enabled = false;
             if (bwk_searchPics.IsBusy)
             {
                 bwk_searchPics.CancelAsync();
@@ -150,14 +158,102 @@ namespace Import
         public void UpdateSearchResults()
         {
             lbl_nbPic.Text = nbSelectedPics + "/" + nbPics + " pictures selected.";
-            if (nbPics > 0 && !grp_photos.Enabled)
+            if (nbPics > 0)
             {
                 grp_photos.Enabled = true;
-                grp_options.Enabled = true;
-                grp_to.Enabled = true;
+                grp_photos_Validate();
             }
-            if (nbSelectedPics > 0 && !btn_import.Enabled)
+            else
+            {
+                grp_photos.Enabled = false;
+                grp_options.Enabled = false;
+                grp_to.Enabled = false;
+                btn_import.Enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Validate the elements of the group. If they are all correct, enable the next group.
+        /// </summary>
+        private void grp_photos_Validate()
+        {
+            if (nbSelectedPics > 0)
+            {
+                grp_options.Enabled = true;
+                grp_options_Validate();
+            }
+            else
+            {
+                grp_options.Enabled = false;
+                grp_to.Enabled = false;
+                btn_import.Enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Validate the elements of the group. If they are all correct, enable the next group.
+        /// </summary>
+        private void grp_options_Validate()
+        {
+            bool valid = true;
+            // tbx_subdirectoryPattern
+            valid &= cbx_createSubdirectory.Checked ? ComputePath(tbx_subdirectoryPattern.Text).IndexOfAny(Path.GetInvalidPathChars()) == -1 && tbx_subdirectoryPattern.Text.LastIndexOfAny(new char[]{ ':', '/'}) == -1 : true;
+            bool b = Uri.IsWellFormedUriString(ComputePath(tbx_subdirectoryPattern.Text).Replace('\\', '/'), UriKind.Relative);
+            // tbx_filenamePattern
+            valid &= ComputeFilename(tbx_filenamePattern.Text).IndexOfAny(Path.GetInvalidFileNameChars()) == -1;
+            // tbx_tag
+            valid &= tbx_tag.Text.IndexOfAny(Path.GetInvalidFileNameChars()) == -1;
+
+            if (valid)
+            {
+                grp_to.Enabled = true;
+                grp_to_Validate();
+            }
+            else
+            {
+                grp_to.Enabled = false;
+                btn_import.Enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Replace parameters in the subdirectory pattern with their values.
+        /// </summary>
+        /// <param name="pPath">The subdirectory pattern.</param>
+        /// <param name="pDate">The date to use.</param>
+        /// <param name="pTime">The time to use.</param>
+        /// <param name="pNum">The sequence number to use.</param>
+        /// <param name="pTag">The tag to use.</param>
+        /// <returns>The path with the parameters replaced by their values.</returns>
+        private string ComputePath(string pPath, string pDate = "9999-12-31", string pTime = "23.59", string pNum = "0", string pTag = "tag")
+        {
+            return pPath.Replace("$(DATE)", pDate).Replace("$(TIME)", pTime).Replace("$(#)", pNum).Replace("$(TAG)", pTag);
+        }
+
+        /// <summary>
+        /// Replaces parameters in the filename pattern with their values.
+        /// </summary>
+        /// <param name="pFilename">The filename pattern.</param>
+        /// <param name="pDate">The date to use.</param>
+        /// <param name="pTime">The time to use.</param>
+        /// <param name="pNum">The sequence number to use.</param>
+        /// <param name="pTag">The tag to use.</param>
+        /// <param name="pExtension">The file extension to use.</param>
+        /// <returns>The filename with the parameters replaced by their values.</returns>
+        private string ComputeFilename(string pFilename, string pDate = "9999-12-31", string pTime = "23.59", string pNum = "0", string pTag = "tag", string pName = "filename", string pExtension = "raw")
+        {
+            return ComputePath(pFilename, pDate, pTime, pNum, pTag).Replace("$(NAME)", pName).Replace("$(EXT)", pExtension);
+        }
+
+        /// <summary>
+        /// Validate the elements of the group. If they are all correct, enable the next group.
+        /// </summary>
+        private void grp_to_Validate()
+        {
+            if (Directory.Exists(tbx_pathTo.Text))
+            {
                 btn_import.Enabled = true;
+            }
         }
 
         /// <summary>
@@ -273,6 +369,40 @@ namespace Import
             {
                 LogError("An error occured during pictures search:", e.Error);
             }
+        }
+
+        private void Tbx_subdirectoryPattern_TextChanged(object sender, EventArgs e)
+        {
+            grp_options_Validate();
+        }
+
+        private void Tbx_filenamePattern_TextChanged(object sender, EventArgs e)
+        {
+            grp_options_Validate();
+        }
+
+        private void Tbx_tag_TextChanged(object sender, EventArgs e)
+        {
+            grp_options_Validate();
+        }
+
+        private void Btn_import_Click(object sender, EventArgs e)
+        {
+            //TODO Import func
+        }
+
+        private void Tbx_pathTo_TextChanged(object sender, EventArgs e)
+        {
+            if (Directory.Exists(tbx_pathTo.Text))
+                btn_import.Enabled = true;
+            else
+                btn_import.Enabled = false;
+        }
+
+        private void Cbx_createSubdirectory_CheckedChanged(object sender, EventArgs e)
+        {
+            tbx_subdirectoryPattern.Enabled = cbx_createSubdirectory.Checked;
+            grp_options_Validate();
         }
     }
 }

@@ -144,6 +144,9 @@
   <data name="tbx_filenamePattern.AutoCompleteCustomSource4" xml:space="preserve">
     <value>$(TIME)</value>
   </data>
+  <data name="tbx_filenamePattern.AutoCompleteCustomSource5" xml:space="preserve">
+    <value>$(NAME)</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tbx_filenamePattern.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 94</value>
@@ -161,9 +164,9 @@
   <data name="tbx_filenamePattern.ToolTip" xml:space="preserve">
     <value>$(DATE): Shooting date.
 $(EXT): File extension.
+$(NAME): File name.
 $(#): Sequence number.
-$(TAG): Your custom word.
-</value>
+$(TAG): Your custom word.</value>
   </data>
   <data name="&gt;&gt;tbx_filenamePattern.Name" xml:space="preserve">
     <value>tbx_filenamePattern</value>
@@ -179,9 +182,6 @@ $(TAG): Your custom word.
   </data>
   <metadata name="tbx_subdirectoryPattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>591, 70</value>
   </metadata>
   <data name="tbx_subdirectoryPattern.AccessibleDescription" xml:space="preserve">
     <value>The pattern to use to create subdirectory</value>
@@ -213,6 +213,9 @@ $(TAG): Your custom word.
   <data name="tbx_subdirectoryPattern.Text" xml:space="preserve">
     <value>$(DATE)</value>
   </data>
+  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>591, 70</value>
+  </metadata>
   <data name="tbx_subdirectoryPattern.ToolTip" xml:space="preserve">
     <value>$(DATE): Shooting date.
 $(#): Sequence number.
@@ -263,6 +266,9 @@ $(TIME): Shooting time.</value>
   </data>
   <data name="tbx_tag.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 133</value>
+  </data>
+  <data name="tbx_tag.MaxLength" type="System.Int32, mscorlib">
+    <value>127</value>
   </data>
   <data name="tbx_tag.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 20</value>
@@ -361,63 +367,6 @@ $(TIME): Shooting time.</value>
   <metadata name="btn_editMetadata.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="cbx_excludeJPEG.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;btn_editMetadata.Name" xml:space="preserve">
-    <value>btn_editMetadata</value>
-  </data>
-  <data name="&gt;&gt;btn_editMetadata.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btn_editMetadata.Parent" xml:space="preserve">
-    <value>grp_photos</value>
-  </data>
-  <data name="&gt;&gt;btn_editMetadata.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbx_excludeJPEG.Name" xml:space="preserve">
-    <value>cbx_excludeJPEG</value>
-  </data>
-  <data name="&gt;&gt;cbx_excludeJPEG.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbx_excludeJPEG.Parent" xml:space="preserve">
-    <value>grp_photos</value>
-  </data>
-  <data name="&gt;&gt;cbx_excludeJPEG.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="grp_photos.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="grp_photos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 100</value>
-  </data>
-  <data name="grp_photos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 115</value>
-  </data>
-  <data name="grp_photos.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="grp_photos.Text" xml:space="preserve">
-    <value>Pictures</value>
-  </data>
-  <data name="&gt;&gt;grp_photos.Name" xml:space="preserve">
-    <value>grp_photos</value>
-  </data>
-  <data name="&gt;&gt;grp_photos.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grp_photos.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grp_photos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="btn_editMetadata.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btn_editMetadata.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 85</value>
   </data>
@@ -471,6 +420,33 @@ $(TIME): Shooting time.</value>
   </data>
   <data name="&gt;&gt;cbx_excludeJPEG.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="grp_photos.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="grp_photos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 100</value>
+  </data>
+  <data name="grp_photos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>428, 115</value>
+  </data>
+  <data name="grp_photos.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="grp_photos.Text" xml:space="preserve">
+    <value>Pictures</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Name" xml:space="preserve">
+    <value>grp_photos</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grp_photos.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="lbl_filenamePattern.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -583,6 +559,24 @@ $(TIME): Shooting time.</value>
   <metadata name="lbl_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="lbl_tag.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_tag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 117</value>
+  </data>
+  <data name="lbl_tag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 13</value>
+  </data>
+  <data name="lbl_tag.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lbl_tag.Text" xml:space="preserve">
+    <value>Tag</value>
+  </data>
   <data name="&gt;&gt;lbl_tag.Name" xml:space="preserve">
     <value>lbl_tag</value>
   </data>
@@ -621,39 +615,6 @@ $(TIME): Shooting time.</value>
   </data>
   <data name="&gt;&gt;grp_options.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <metadata name="lbl_tag.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lbl_tag.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_tag.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl_tag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 117</value>
-  </data>
-  <data name="lbl_tag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 13</value>
-  </data>
-  <data name="lbl_tag.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lbl_tag.Text" xml:space="preserve">
-    <value>Tag</value>
-  </data>
-  <data name="&gt;&gt;lbl_tag.Name" xml:space="preserve">
-    <value>lbl_tag</value>
-  </data>
-  <data name="&gt;&gt;lbl_tag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_tag.Parent" xml:space="preserve">
-    <value>grp_options</value>
-  </data>
-  <data name="&gt;&gt;lbl_tag.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="btn_import.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1021,9 +982,6 @@ $(TIME): Shooting time.</value>
   <data name="fbd_pathTo.SelectedPath" xml:space="preserve">
     <value>C:\Users\virgi\Pictures</value>
   </data>
-  <metadata name="tip_subdirectoryPattern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>591, 70</value>
-  </metadata>
   <metadata name="bwk_searchPics.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>769, 70</value>
   </metadata>

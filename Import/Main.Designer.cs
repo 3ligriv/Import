@@ -87,12 +87,14 @@ namespace Import
             resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource1"),
             resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource2"),
             resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource3"),
-            resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource4")});
+            resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource4"),
+            resources.GetString("tbx_filenamePattern.AutoCompleteCustomSource5")});
             this.tbx_filenamePattern.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.tbx_filenamePattern.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tbx_filenamePattern.HideSelection = false;
             this.tbx_filenamePattern.Name = "tbx_filenamePattern";
             this.tip_filenamePattern.SetToolTip(this.tbx_filenamePattern, resources.GetString("tbx_filenamePattern.ToolTip"));
+            this.tbx_filenamePattern.TextChanged += new System.EventHandler(this.Tbx_filenamePattern_TextChanged);
             // 
             // tbx_subdirectoryPattern
             // 
@@ -110,6 +112,7 @@ namespace Import
             this.tbx_subdirectoryPattern.Name = "tbx_subdirectoryPattern";
             this.tip_subdirectoryPattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip"));
             this.tip_filenamePattern.SetToolTip(this.tbx_subdirectoryPattern, resources.GetString("tbx_subdirectoryPattern.ToolTip1"));
+            this.tbx_subdirectoryPattern.TextChanged += new System.EventHandler(this.Tbx_subdirectoryPattern_TextChanged);
             // 
             // tbx_tag
             // 
@@ -124,6 +127,7 @@ namespace Import
             resources.GetString("tbx_tag.AutoCompleteCustomSource4")});
             this.tbx_tag.HideSelection = false;
             this.tbx_tag.Name = "tbx_tag";
+            this.tbx_tag.TextChanged += new System.EventHandler(this.Tbx_tag_TextChanged);
             // 
             // btn_selectPics
             // 
@@ -193,6 +197,7 @@ namespace Import
             this.cbx_createSubdirectory.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbx_createSubdirectory.Name = "cbx_createSubdirectory";
             this.cbx_createSubdirectory.UseVisualStyleBackColor = true;
+            this.cbx_createSubdirectory.CheckedChanged += new System.EventHandler(this.Cbx_createSubdirectory_CheckedChanged);
             // 
             // grp_options
             // 
@@ -220,6 +225,7 @@ namespace Import
             this.btn_import.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_import.Name = "btn_import";
             this.btn_import.UseVisualStyleBackColor = true;
+            this.btn_import.Click += new System.EventHandler(this.Btn_import_Click);
             // 
             // lbl_pathTo
             // 
@@ -236,6 +242,7 @@ namespace Import
             this.tbx_pathTo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
             this.tbx_pathTo.CausesValidation = false;
             this.tbx_pathTo.Name = "tbx_pathTo";
+            this.tbx_pathTo.TextChanged += new System.EventHandler(this.Tbx_pathTo_TextChanged);
             // 
             // btn_pathTo
             // 
