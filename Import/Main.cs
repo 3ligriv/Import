@@ -14,23 +14,25 @@ namespace Import
     public partial class frm_Main : Form
     {
         /// <summary>
-        /// List of the pictures found.
-        /// Contains info about each file and if it is selected.
+        /// List of the pictures selected.
+        /// Contains FileInfo objects.
         /// </summary>
-        public List<Picture> Pictures { get; private set; }
+        public List<FileInfo> Pictures { get; private set; }
         /// <summary>
-        /// The total number of pictures found in the input folder.
+        /// List of the pictures unselected.
+        /// Contains FileInfo objects.
         /// </summary>
-        public int nbPics = 0;
-        /// <summary>
-        /// The number of pictures currently selected.
-        /// </summary>
-        public int nbSelectedPics = 0;
+        public List<int> SelectedPictures { get; private set; }
+        private readonly char[] invalidPathChars;
 
         public frm_Main()
         {
             InitializeComponent();
-            Pictures = new List<Picture>();
+            Pictures = new List<FileInfo>();
+            SelectedPictures = new List<int>();
+            List<char> temp = Path.GetInvalidFileNameChars().ToList();
+            temp.Remove('\\');
+            invalidPathChars = temp.ToArray();
         }
 
         private void Btn_selectPics(object sender, EventArgs e)
@@ -144,9 +146,8 @@ namespace Import
             {
                 bwk_searchPics.CancelAsync();
             }
-            nbPics = 0;
-            nbSelectedPics = 0;
             Pictures.Clear();
+            SelectedPictures.Clear();
 
             bwk_searchPics.RunWorkerAsync();
         }
@@ -157,8 +158,8 @@ namespace Import
         /// </summary>
         public void UpdateSearchResults()
         {
-            lbl_nbPic.Text = nbSelectedPics + "/" + nbPics + " pictures selected.";
-            if (nbPics > 0)
+            lbl_nbPic.Text = SelectedPictures.Count + "/" + Pictures.Count + " pictures selected.";
+            if (Pictures.Count > 0)
             {
                 grp_photos.Enabled = true;
                 grp_photos_Validate();
@@ -177,7 +178,7 @@ namespace Import
         /// </summary>
         private void grp_photos_Validate()
         {
-            if (nbSelectedPics > 0)
+            if (SelectedPictures.Count > 0)
             {
                 grp_options.Enabled = true;
                 grp_options_Validate();
@@ -196,13 +197,13 @@ namespace Import
         private void grp_options_Validate()
         {
             bool valid = true;
+            char[] invalidFilenameChars = Path.GetInvalidFileNameChars();
             // tbx_subdirectoryPattern
-            valid &= cbx_createSubdirectory.Checked ? ComputePath(tbx_subdirectoryPattern.Text).IndexOfAny(Path.GetInvalidPathChars()) == -1 && tbx_subdirectoryPattern.Text.LastIndexOfAny(new char[]{ ':', '/'}) == -1 : true;
-            bool b = Uri.IsWellFormedUriString(ComputePath(tbx_subdirectoryPattern.Text).Replace('\\', '/'), UriKind.Relative);
+            valid &= cbx_createSubdirectory.Checked ? ComputePath(tbx_subdirectoryPattern.Text).IndexOfAny(invalidPathChars) == -1 : true;
             // tbx_filenamePattern
-            valid &= ComputeFilename(tbx_filenamePattern.Text).IndexOfAny(Path.GetInvalidFileNameChars()) == -1;
+            valid &= ComputeFilename(tbx_filenamePattern.Text).IndexOfAny(invalidFilenameChars) == -1;
             // tbx_tag
-            valid &= tbx_tag.Text.IndexOfAny(Path.GetInvalidFileNameChars()) == -1;
+            valid &= tbx_tag.Text.IndexOfAny(invalidFilenameChars) == -1;
 
             if (valid)
             {
@@ -251,9 +252,9 @@ namespace Import
         private void grp_to_Validate()
         {
             if (Directory.Exists(tbx_pathTo.Text))
-            {
                 btn_import.Enabled = true;
-            }
+            else
+                btn_import.Enabled = false;
         }
 
         /// <summary>
@@ -263,7 +264,9 @@ namespace Import
         /// <returns>Wether a brand is found or not.</returns>
         private static bool SearchBrand(string pVolumeLabel)
         {
-            string[] brands = { "nikon", "canon", "sony", "sigma" };
+            string[] brands = { "blackmagic design", "visiontek", "aigo", "advert tech", "foscam", "phase one", "thomson", "agfaphoto", "leica", "medion", "minox",
+                "praktica", "rollei", "tevion", "traveler", "vageeswari", "canon", "casio", "epson", "fujifilm", "nikon", "olympus", "ricoh", "panasonic", "pentax",
+                "sigma", "sony", "samsung", "hasselblad", "memoto", "benq", "genius", "bell & howell", "ge", "gopro", "hp", "kodak", "lytro", "polaroid", "vivitar", };
             foreach (var brand in brands)
             {
                 if (pVolumeLabel.ToLower().Contains(brand))
@@ -308,16 +311,12 @@ namespace Import
                 else
                 {
                     FileInfo f = new FileInfo(file);
-                    if (cbx_excludeJPEG.Checked && (f.Extension == ".jpg" || f.Extension == ".jpeg"))
+                    if (!cbx_excludeJPEG.Checked && (f.Extension == ".jpg" || f.Extension == ".jpeg"))
                     {
-                        Pictures.Add(new Picture(f, false));
+                        // We add the current number of pics in the list because it will be the index of the current pic after Pictures.Add(f);
+                        SelectedPictures.Add(Pictures.Count);
                     }
-                    else
-                    {
-                        Pictures.Add(new Picture(f, true));
-                        ++nbSelectedPics;
-                    }
-                    ++nbPics;
+                    Pictures.Add(f);
                     worker.ReportProgress(0);
                 }
             }
@@ -330,31 +329,76 @@ namespace Import
 
         private void Bwk_copyPics_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            BackgroundWorker worker = sender as BackgroundWorker;
+            List<FileInfo> picsToCopy = new List<FileInfo>(SelectedPictures.Count);
+            foreach (var index in SelectedPictures)
+            {
+                if (worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+                picsToCopy.Add(Pictures[index]);
+            }
+            int sequence = 1;
+            foreach (var pic in picsToCopy)
+            {
+                DateTime creation = pic.CreationTime;
+                string path = Path.Combine(tbx_pathTo.Text, ComputePath(tbx_subdirectoryPattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), sequence.ToString(), tbx_tag.Text));
+                if (!Directory.Exists(path))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    catch (Exception exc)
+                    {
+                        e.Cancel = true;
+                        LogError("Error while creating the following directory:\n" + path, exc);
+                        return;
+                    }
+                    ++sequence;
+                }
+                try
+                {
+                    pic.CopyTo(Path.Combine(path, ComputeFilename(tbx_filenamePattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), sequence.ToString(), tbx_tag.Text, pic.Name, pic.Extension)));
+                    ++sequence;
+                }
+                catch (IOException io)
+                {
+                    LogError("Error while copying the following file:\n" + pic.FullName + "\nThe file was ignored.", io);
+                }
+                catch (Exception exc)
+                {
+                    e.Cancel = true;
+                    LogError("Error while copying the following file:\n" + pic.FullName, exc);
+                    return;
+                }
+                int progress = sequence / picsToCopy.Count * 100;
+                progress = progress > 100 ? 100 : progress;
+                worker.ReportProgress(progress);
+            }
+            e.Result = sequence;
         }
 
         private void Bwk_copyPics_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-
+            pbr_progress.Value = e.ProgressPercentage;
         }
 
         private void Bwk_copyPics_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            if (!e.Cancelled)
+            {
+                MessageBox.Show("Copy is finished.\n" + (((int)e.Result) - 1) + " file(s) created.", "Copy is finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                pbr_progress.Value = 0;
+                btn_import.Text = "Import";
+            }
         }
 
         private void Cbx_excludeJPEG_CheckedChanged(object sender, EventArgs e)
         {
-            bool selected = !cbx_excludeJPEG.Checked;
-            foreach (Picture picture in Pictures)
-            {
-                picture.IsSelected = selected;
-                if (selected)
-                    ++nbSelectedPics;
-                else
-                    --nbSelectedPics;
-            }
-            UpdateSearchResults();
+            StartSearch();
         }
 
         private void Cbx_recursive_CheckedChanged(object sender, EventArgs e)
@@ -388,7 +432,17 @@ namespace Import
 
         private void Btn_import_Click(object sender, EventArgs e)
         {
-            //TODO Import func
+            if (bwk_copyPics.IsBusy)
+            {
+                bwk_copyPics.CancelAsync();
+                btn_import.Text = "Import";
+                pbr_progress.Value = 0;
+            }
+            else
+            {
+                bwk_copyPics.RunWorkerAsync();
+                btn_import.Text = "Cancel";
+            }
         }
 
         private void Tbx_pathTo_TextChanged(object sender, EventArgs e)
