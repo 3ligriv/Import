@@ -296,9 +296,9 @@ namespace Import
         private void Bwk_searchPics_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
-            string[] filesExtensions = { ".3fr", ".ari", ".arw", ".srf", ".sr2", ".bay", ".cri", ".crw", ".cr2", ".cr3", ".cap", ".iiq", ".eip", ".dcs", ".dcr", ".drf", ".k25", ".kdc", ".dng", ".erf", ".fff",
-                ".mef", ".mdc", ".mos", ".mrw", "*.nef", ".nrw", ".orf", ".pef", ".ptx", ".pxn", ".R3D", ".raf", ".raw", ".rw2", ".raw", ".rwl", ".dng", ".rwz", ".srw", ".x3f", "*.jpg", "*.jpeg" };
-            List<string> files = filesExtensions.AsParallel().SelectMany(searchPattern => Directory.EnumerateFiles(tbx_pathFrom.Text, searchPattern, cbx_recursive.Checked ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly)).ToList();
+            string[] filesExtensions = { "3fr", "ari", "arw", "srf", "sr2", "bay", "cri", "crw", "cr2", "cr3", "cap", "iiq", "eip", "dcs", "dcr", "drf", "k25", "kdc", "dng", "erf", "fff",
+                "mef", "mdc", "mos", "mrw", "nef", "nrw", "orf", "pef", "ptx", "pxn", "R3D", "raf", "raw", "rw2", "raw", "rwl", "dng", "rwz", "srw", "x3f", "jpg", "jpeg" };
+            List<string> files = filesExtensions.AsParallel().SelectMany(searchPattern => Directory.EnumerateFiles(tbx_pathFrom.Text, "*." + searchPattern, cbx_recursive.Checked ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly)).ToList();
             foreach (var file in files)
             {
                 if (worker.CancellationPending)
@@ -309,7 +309,8 @@ namespace Import
                 else
                 {
                     FileInfo f = new FileInfo(file);
-                    if (!cbx_excludeJPEG.Checked && (f.Extension == ".jpg" || f.Extension == ".jpeg"))
+
+                    if (!cbx_excludeJPEG.Checked || (f.Extension.ToLower() != ".jpg" && f.Extension.ToLower() != ".jpeg"))
                     {
                         // We add the current number of pics in the list because it will be the index of the current pic after Pictures.Add(f);
                         SelectedPictures.Add(Pictures.Count);
