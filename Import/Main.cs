@@ -123,10 +123,6 @@ namespace Import
                     LogError("Error when retrieving info for: " + Drive.Name, exc);
                 }
             }
-            if (found)
-            {
-                StartSearch();
-            }
 
             //
             // tbx_pathTo
@@ -301,7 +297,7 @@ namespace Import
         {
             BackgroundWorker worker = sender as BackgroundWorker;
             string[] filesExtensions = { ".3fr", ".ari", ".arw", ".srf", ".sr2", ".bay", ".cri", ".crw", ".cr2", ".cr3", ".cap", ".iiq", ".eip", ".dcs", ".dcr", ".drf", ".k25", ".kdc", ".dng", ".erf", ".fff",
-                ".mef", ".mdc", ".mos", ".mrw", ".nef", ".nrw", ".orf", ".pef", ".ptx", ".pxn", ".R3D", ".raf", ".raw", ".rw2", ".raw", ".rwl", ".dng", ".rwz", ".srw", ".x3f", "*.jpg", "*.jpeg" };
+                ".mef", ".mdc", ".mos", ".mrw", "*.nef", ".nrw", ".orf", ".pef", ".ptx", ".pxn", ".R3D", ".raf", ".raw", ".rw2", ".raw", ".rwl", ".dng", ".rwz", ".srw", ".x3f", "*.jpg", "*.jpeg" };
             List<string> files = filesExtensions.AsParallel().SelectMany(searchPattern => Directory.EnumerateFiles(tbx_pathFrom.Text, searchPattern, cbx_recursive.Checked ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly)).ToList();
             foreach (var file in files)
             {
