@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -327,10 +329,28 @@ namespace Import
             UpdateSearchResults();
         }
 
+        /// <summary>
+        /// Retrieve the shooting date and time of a picture.
+        /// </summary>
+        /// <param name="pRegex">The regex initialized with the ":" string.</param>
+        /// <param name="pPath">The full path of the picture.</param>
+        /// <returns>A DateTime representing the shooting date and time.</returns>
+        private DateTime GetShootingDate(Regex pRegex, string pPath)
+        {
+            using (FileStream fs = new FileStream(pPath, FileMode.Open, FileAccess.Read))
+            using (Image img = Image.FromStream(fs, false, false))
+            {
+                PropertyItem prop = img.GetPropertyItem(36867);
+                string strShootingDate = pRegex.Replace(Encoding.UTF8.GetString(prop.Value), "-", 2);
+                return DateTime.Parse(strShootingDate);
+            }
+        }
+
         private void Bwk_copyPics_DoWork(object sender, DoWorkEventArgs e)
         {
             BackgroundWorker worker = sender as BackgroundWorker;
             List<FileInfo> picsToCopy = new List<FileInfo>(SelectedPictures.Count);
+            Regex r = new Regex(":");
             foreach (var index in SelectedPictures)
             {
                 if (worker.CancellationPending)
@@ -340,11 +360,26 @@ namespace Import
                 }
                 picsToCopy.Add(Pictures[index]);
             }
-            int sequence = 1;
+            float folderSequence = 1;
+            float picSequence = 1;
             foreach (var pic in picsToCopy)
             {
-                DateTime creation = pic.CreationTime;
-                string path = Path.Combine(tbx_pathTo.Text, ComputePath(tbx_subdirectoryPattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), sequence.ToString(), tbx_tag.Text));
+                if (worker.CancellationPending)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+                DateTime creation;
+                try
+                {
+                    creation = GetShootingDate(r, pic.FullName);
+                }
+                catch (Exception exc)
+                {
+                    LogError("Error while retrieving the shooting date for the following file:\n" + pic.FullName, exc);
+                    creation = pic.LastWriteTime;
+                }
+                string path = Path.Combine(tbx_pathTo.Text, ComputePath(tbx_subdirectoryPattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), folderSequence.ToString(), tbx_tag.Text));
                 if (!Directory.Exists(path))
                 {
                     try
@@ -357,12 +392,12 @@ namespace Import
                         LogError("Error while creating the following directory:\n" + path, exc);
                         return;
                     }
-                    ++sequence;
+                    ++folderSequence;
                 }
                 try
                 {
-                    pic.CopyTo(Path.Combine(path, ComputeFilename(tbx_filenamePattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), sequence.ToString(), tbx_tag.Text, pic.Name, pic.Extension)));
-                    ++sequence;
+                    pic.CopyTo(Path.Combine(path, ComputeFilename(tbx_filenamePattern.Text, creation.ToString("yyyy-MM-dd"), creation.ToString("HH.mm"), picSequence.ToString(), tbx_tag.Text, pic.Name, pic.Extension)));
+                    ++picSequence;
                 }
                 catch (IOException io)
                 {
@@ -374,11 +409,11 @@ namespace Import
                     LogError("Error while copying the following file:\n" + pic.FullName, exc);
                     return;
                 }
-                int progress = sequence / picsToCopy.Count * 100;
+                int progress = (int)(picSequence / picsToCopy.Count * 100);
                 progress = progress > 100 ? 100 : progress;
                 worker.ReportProgress(progress);
             }
-            e.Result = sequence;
+            e.Result = (int)picSequence;
         }
 
         private void Bwk_copyPics_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -390,7 +425,7 @@ namespace Import
         {
             if (!e.Cancelled)
             {
-                MessageBox.Show("Copy is finished.\n" + (((int)e.Result) - 1) + " file(s) created.", "Copy is finished", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Copying is complete!\n" + (((int)e.Result) - 1) + " file(s) created.", "Copy complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 pbr_progress.Value = 0;
                 btn_import.Text = "Import";
             }
